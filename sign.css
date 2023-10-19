@@ -1,0 +1,63 @@
+*{
+    margin:0%;
+    padding:0%;
+}
+
+.container{
+    background-color: aliceblue;
+    height: 100vh;
+    width:100vw;
+   /* position: relative;*/
+   display: flex;
+   justify-content: center; /*this is x axis horizontal centering*/
+   align-items: center;/*this is y axis vertical centering*/
+}
+
+.box{
+
+    /*vertical centering*/
+    width: 300px;
+    height: 350px;
+    background-color:orangered;
+    border-radius: 20px;
+    text-align: center;
+    /*
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform:translate(-50%,-50%);*/
+}
+
+#button{
+    color: white;
+    background: dodgerblue;
+    padding:5px 5px 5px 5px;
+    border-radius: 20px;
+    width:95px;
+    height:35px;
+    font-size: 20px;
+}
+
+#button:hover{
+    color: black;
+    background:rgb(116, 236, 4);
+}
+
+#input{
+    margin-top: 35px;
+    padding:10px 10px 10px 10px;
+}
+
+#password{
+    padding:10px 10px 10px 10px;
+}
+#sin{
+    width: 60px;
+    height: 25px;
+    border: none;
+    border-radius: 3px ;
+    background-color: dodgerblue;
+    color: white;
+    font-size: 17px;
+    padding: 3px;
+}

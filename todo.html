@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin:0;
+            background-color:#616091
+        }
+        h1{
+            color: #fb97ad;
+            text-align: center;
+        }
+        div{
+            margin: 16px;
+            padding: 8px;
+            background-color: #04041c;
+            box-shadow: 2px 5px 5px rgba(0,0,0,0.7);
+            border:none;
+            border-radius: 25px;
+        }
+        #container{
+            margin: 24px;
+            padding: 24px;
+            color: white;
+            background-color: #04041c;
+            text-align: center;
+        }
+        #input{
+            color: white;
+            background-color: #04041c;
+            border: none;
+            border-bottom: 1px solid #616091;
+            border-left: 1px solid #616091;
+        }
+        #btn{
+            border: none;
+            border-radius: 8px;
+            background-color: #b4b3d8;
+        }
+    </style>
+    <title>TO-DO LIST</title>
+</head>
+<body>
+    <section id="todo">
+        <div>
+            <h1>To Do List</h1>
+        </div>
+        <div id="container">
+            <input type="text" id="input" placeholder="Enter your text here...">
+            &nbsp;&nbsp;&nbsp;
+            <button id="btn">AddToDo</button>
+            <ul class="ul" style="list-style-type: none;"></ul>
+        </div>
+    
+    </section>
+  
+
+
+    <script>
+        document.getElementById("btn").addEventListener("click",
+        function (){
+            let input = document.getElementById('input').value;
+
+
+            //Creating the to do list elements
+            let element = document.createElement('li');
+            let btn1= document.createElement("button");
+            let btn2= document.createElement("button");
+            btn1.innerText = "Done";
+            btn2.innerText = "Delete";
+            element.innerText = input;
+            let ul = document.querySelector('ul');
+
+            //Appending the created elements to html 
+            ul.appendChild(element);
+            element.appendChild(btn1);
+            element.appendChild(btn2);
+
+            //adding style to list
+            btn1.style.border="none";
+            btn1.style.marginLeft = "3%";
+            btn1.style.borderRadius = "8px";
+            btn1.style.backgroundColor = "#b4b3d8";
+
+            btn2.style.border="none";
+            btn2.style.marginLeft ="3%";
+            btn2.style.borderRadius="8px";
+            btn2.style.backgroundColor="#b4b3d8";
+
+            // Adding functionality to the button
+            btn1.addEventListener('click',
+            function (){
+                element.style.textDecoration = "line-through";
+            });
+            btn2.addEventListener('click',
+            function (){
+                element.remove();
+            });
+
+            document.getElementById('input').value = "";
+
+        });
+    </script>
+</body>
+</html>
